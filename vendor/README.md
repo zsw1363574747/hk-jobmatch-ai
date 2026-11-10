@@ -13,7 +13,6 @@ jobmatch 运行期**不装任何包**。这里的「完全下载」指的是：
 |---|---|
 | [MetaDotHK/jobsdb-scraper](https://github.com/MetaDotHK/jobsdb-scraper) | JobsDB `/api/jobsearch/v5/search` 的参数与分页上限（page ≤ 1000、pageSize 实际 30） |
 | [IkerGoni/jobsdb-wrapper](https://github.com/IkerGoni/jobsdb-wrapper) | SEEK 的 GraphQL 端点、`x-custom-features` 头、`JobSearchV7` / `JobDetail` 的操作形状 |
-| [prui0474/hk-job-radar](https://github.com/prui0474/hk-job-radar) | 持久化浏览器 profile + 人工过验证、单站配额/随机延迟的克制策略 |
 | [wit3k/jobsdb_details_fetch_firefox_plugin](https://github.com/wit3k/jobsdb_details_fetch_firefox_plugin) | 「JSON-LD → 内嵌数据 → DOM」三层兜底的解析顺序 |
 | [JJ-Jacko/jobs_hk](https://github.com/JJ-Jacko/jobs_hk) | 劳工处 `jobs.gov.hk` 的 `jobCard` 路径与 `order` 参数形式 |
 
