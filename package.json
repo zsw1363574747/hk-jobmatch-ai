@@ -1,0 +1,17 @@
+{
+  "name": "jobmatch",
+  "version": "0.9.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first job-search workbench: parse a CV, scrape a job board, score postings, explain the market.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node web/server.mjs",
+    "test": "node bundle/bin/selftest.mjs && node bundle/bin/architecture-test.mjs",
+    "test:selftest": "node bundle/bin/selftest.mjs",
+    "fixtures": "node bundle/bin/capture-fixtures.mjs"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,4 @@
+{"ts":"2026-10-29T18:00:00.000Z","kind":"decision","text":"分档阈值定为 50/40/30：按真实分数分布（55/50/50/45/40）定的，不是行业标准；画像变了要复看","tags":["scoring","threshold"]}
+{"ts":"2026-10-29T18:10:00.000Z","kind":"lesson","text":"搜索阶段只有标题和摘要、没有 JD 正文，skills 因子通常为 0；真正判断匹配要看复排写入的 fit","tags":["scoring","agent"]}
+{"ts":"2026-10-29T18:20:00.000Z","kind":"lesson","text":"复排的 fit 会覆盖规则分，页面按最终分排序；只复排前 N 条时，其余行显示「这条还没复排」","tags":["report","sorting"]}
+{"ts":"2026-10-29T18:30:00.000Z","kind":"lesson","text":"PDF 简历不支持：让用户用 Word/WPS 另存 .docx，或直接把简历文本粘进输入框","tags":["resume","pdf"]}

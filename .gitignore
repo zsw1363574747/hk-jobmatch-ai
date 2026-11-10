@@ -1,0 +1,12 @@
+# 运行期数据：简历、抓到的 JD、缓存、浏览器 profile —— 一律不进仓库
+data/
+
+# 依赖 / 日志 / 系统垃圾
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/

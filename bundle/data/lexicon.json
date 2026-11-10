@@ -1,0 +1,704 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "label": "SQL",
+      "patterns": [
+        "sql",
+        "mysql",
+        "postgresql",
+        "postgres"
+      ]
+    },
+    {
+      "label": "Python",
+      "patterns": [
+        "python",
+        "pandas",
+        "numpy"
+      ]
+    },
+    {
+      "label": "R",
+      "patterns": [
+        "r programming",
+        "r语言"
+      ]
+    },
+    {
+      "label": "Excel",
+      "patterns": [
+        "excel",
+        "vba",
+        "pivot table"
+      ]
+    },
+    {
+      "label": "Power BI",
+      "patterns": [
+        "power bi",
+        "powerbi",
+        "dax"
+      ]
+    },
+    {
+      "label": "Tableau",
+      "patterns": [
+        "tableau"
+      ]
+    },
+    {
+      "label": "Looker",
+      "patterns": [
+        "looker",
+        "lookml"
+      ]
+    },
+    {
+      "label": "ETL",
+      "patterns": [
+        "etl",
+        "elt"
+      ]
+    },
+    {
+      "label": "Airflow",
+      "patterns": [
+        "airflow"
+      ]
+    },
+    {
+      "label": "Spark",
+      "patterns": [
+        "spark",
+        "pyspark"
+      ]
+    },
+    {
+      "label": "Hadoop",
+      "patterns": [
+        "hadoop",
+        "hive"
+      ]
+    },
+    {
+      "label": "BigQuery",
+      "patterns": [
+        "bigquery"
+      ]
+    },
+    {
+      "label": "Snowflake",
+      "patterns": [
+        "snowflake"
+      ]
+    },
+    {
+      "label": "dbt",
+      "patterns": [
+        "dbt"
+      ]
+    },
+    {
+      "label": "Statistics",
+      "patterns": [
+        "statistics",
+        "统计学",
+        "假设检验"
+      ]
+    },
+    {
+      "label": "A/B Testing",
+      "patterns": [
+        "a/b test",
+        "a/b testing",
+        "ab test",
+        "ab testing"
+      ]
+    },
+    {
+      "label": "Machine Learning",
+      "patterns": [
+        "machine learning",
+        "机器学习",
+        "scikit"
+      ]
+    },
+    {
+      "label": "NLP",
+      "patterns": [
+        "nlp",
+        "自然语言处理"
+      ]
+    },
+    {
+      "label": "Data Visualization",
+      "patterns": [
+        "data visualization",
+        "数据可视化"
+      ]
+    },
+    {
+      "label": "Dashboard",
+      "patterns": [
+        "dashboard",
+        "看板",
+        "仪表盘"
+      ]
+    },
+    {
+      "label": "Data Warehouse",
+      "patterns": [
+        "data warehouse",
+        "数据仓库"
+      ]
+    },
+    {
+      "label": "Data Modeling",
+      "patterns": [
+        "data model",
+        "data modeling",
+        "数据建模"
+      ]
+    },
+    {
+      "label": "Java",
+      "patterns": [
+        "java"
+      ]
+    },
+    {
+      "label": "Scala",
+      "patterns": [
+        "scala"
+      ]
+    },
+    {
+      "label": "Git",
+      "patterns": [
+        "git",
+        "github",
+        "gitlab"
+      ]
+    },
+    {
+      "label": "Docker",
+      "patterns": [
+        "docker",
+        "kubernetes",
+        "k8s"
+      ]
+    },
+    {
+      "label": "AWS",
+      "patterns": [
+        "aws",
+        "amazon web services"
+      ]
+    },
+    {
+      "label": "Azure",
+      "patterns": [
+        "azure"
+      ]
+    },
+    {
+      "label": "GCP",
+      "patterns": [
+        "gcp",
+        "google cloud"
+      ]
+    },
+    {
+      "label": "Kafka",
+      "patterns": [
+        "kafka"
+      ]
+    },
+    {
+      "label": "Requirement Analysis",
+      "patterns": [
+        "requirement analysis",
+        "requirements gathering",
+        "需求分析",
+        "需求调研"
+      ]
+    },
+    {
+      "label": "User Research",
+      "patterns": [
+        "user research",
+        "user interview",
+        "用户研究",
+        "用户访谈"
+      ]
+    },
+    {
+      "label": "Competitive Analysis",
+      "patterns": [
+        "competitive analysis",
+        "market research",
+        "竞品分析",
+        "市场调研"
+      ]
+    },
+    {
+      "label": "Roadmap",
+      "patterns": [
+        "roadmap",
+        "产品路线图",
+        "路线图"
+      ]
+    },
+    {
+      "label": "PRD",
+      "patterns": [
+        "prd",
+        "product requirement",
+        "产品需求文档"
+      ]
+    },
+    {
+      "label": "Prototyping",
+      "patterns": [
+        "prototype",
+        "wireframe",
+        "原型"
+      ]
+    },
+    {
+      "label": "Figma",
+      "patterns": [
+        "figma"
+      ]
+    },
+    {
+      "label": "Axure",
+      "patterns": [
+        "axure"
+      ]
+    },
+    {
+      "label": "JIRA",
+      "patterns": [
+        "jira",
+        "confluence"
+      ]
+    },
+    {
+      "label": "Agile",
+      "patterns": [
+        "agile",
+        "scrum",
+        "sprint",
+        "敏捷"
+      ]
+    },
+    {
+      "label": "Product Owner",
+      "patterns": [
+        "product owner",
+        "product backlog",
+        "user story",
+        "用户故事"
+      ]
+    },
+    {
+      "label": "Project Management",
+      "patterns": [
+        "project management",
+        "项目管理"
+      ]
+    },
+    {
+      "label": "Stakeholder Management",
+      "patterns": [
+        "stakeholder",
+        "跨部门",
+        "跨团队"
+      ]
+    },
+    {
+      "label": "Go-to-Market",
+      "patterns": [
+        "go-to-market",
+        "gtm",
+        "商业化"
+      ]
+    },
+    {
+      "label": "Growth",
+      "patterns": [
+        "user growth",
+        "growth hacking",
+        "用户增长",
+        "增长"
+      ]
+    },
+    {
+      "label": "OKR",
+      "patterns": [
+        "okr",
+        "kpi"
+      ]
+    },
+    {
+      "label": "Analytics Tracking",
+      "patterns": [
+        "google analytics",
+        "埋点",
+        "event tracking"
+      ]
+    },
+    {
+      "label": "Persona",
+      "patterns": [
+        "persona",
+        "用户画像"
+      ]
+    },
+    {
+      "label": "UI/UX",
+      "patterns": [
+        "ui/ux",
+        "ux design",
+        "交互设计",
+        "用户体验"
+      ]
+    },
+    {
+      "label": "AI Product",
+      "patterns": [
+        "ai product",
+        "llm",
+        "rag",
+        "agent workflow",
+        "智能体"
+      ]
+    },
+    {
+      "label": "Data Analysis",
+      "patterns": [
+        "data analysis",
+        "数据分析"
+      ]
+    },
+    {
+      "label": "Low-code",
+      "patterns": [
+        "low-code",
+        "low code",
+        "低代码",
+        "积木后台"
+      ]
+    },
+    {
+      "label": "Recommendation",
+      "patterns": [
+        "recommendation",
+        "personalization",
+        "推荐算法",
+        "个性化推荐"
+      ]
+    },
+    {
+      "label": "CRM",
+      "patterns": [
+        "crm",
+        "客户关系管理"
+      ]
+    },
+    {
+      "label": "Fulfillment",
+      "patterns": [
+        "fulfillment",
+        "履约"
+      ]
+    },
+    {
+      "label": "Pricing",
+      "patterns": [
+        "pricing",
+        "dynamic pricing",
+        "竞价",
+        "调价"
+      ]
+    },
+    {
+      "label": "Conversion",
+      "patterns": [
+        "conversion rate",
+        "转化率",
+        "cvr"
+      ]
+    },
+    {
+      "label": "GMV/GTV",
+      "patterns": [
+        "gmv",
+        "gtv"
+      ]
+    },
+    {
+      "label": "Retention",
+      "patterns": [
+        "retention",
+        "复购",
+        "留存"
+      ]
+    },
+    {
+      "label": "Route Planning",
+      "patterns": [
+        "route planning",
+        "路线规划"
+      ]
+    },
+    {
+      "label": "Search Analytics",
+      "patterns": [
+        "search analysis",
+        "搜索分析",
+        "搜索数据"
+      ]
+    },
+    {
+      "label": "Operations",
+      "patterns": [
+        "operations",
+        "运营"
+      ]
+    },
+    {
+      "label": "Merchandising",
+      "patterns": [
+        "merchandising",
+        "商品运营",
+        "商品管理"
+      ]
+    }
+  ],
+  "titles": [
+    {
+      "label": "Data Analyst",
+      "patterns": [
+        "data analyst",
+        "数据分析师",
+        "数据分析员"
+      ],
+      "domain": "data"
+    },
+    {
+      "label": "Business Intelligence Analyst",
+      "patterns": [
+        "business intelligence",
+        "bi analyst",
+        "bi 分析师",
+        "商业智能"
+      ],
+      "domain": "data"
+    },
+    {
+      "label": "Data Engineer",
+      "patterns": [
+        "data engineer",
+        "数据工程师"
+      ],
+      "domain": "engineering"
+    },
+    {
+      "label": "Analytics Engineer",
+      "patterns": [
+        "analytics engineer"
+      ],
+      "domain": "engineering"
+    },
+    {
+      "label": "Product Manager",
+      "patterns": [
+        "product manager",
+        "产品经理"
+      ],
+      "domain": "product"
+    },
+    {
+      "label": "Product Analyst",
+      "patterns": [
+        "product analyst",
+        "产品分析师"
+      ],
+      "domain": "product"
+    },
+    {
+      "label": "Business Analyst",
+      "patterns": [
+        "business analyst",
+        "业务分析师"
+      ],
+      "domain": "business"
+    },
+    {
+      "label": "Marketing Analyst",
+      "patterns": [
+        "marketing analyst",
+        "市场分析师"
+      ],
+      "domain": "marketing"
+    },
+    {
+      "label": "Financial Analyst",
+      "patterns": [
+        "financial analyst",
+        "财务分析师"
+      ],
+      "domain": "finance"
+    },
+    {
+      "label": "Risk Analyst",
+      "patterns": [
+        "risk analyst",
+        "风控",
+        "风险管理"
+      ],
+      "domain": "finance"
+    },
+    {
+      "label": "Operations Analyst",
+      "patterns": [
+        "operations analyst",
+        "运营分析师"
+      ],
+      "domain": "operations"
+    },
+    {
+      "label": "HR Data Analyst",
+      "patterns": [
+        "hr data",
+        "people analytics",
+        "人力资源数据"
+      ],
+      "domain": "people"
+    },
+    {
+      "label": "AI Product Manager",
+      "patterns": [
+        "ai product manager",
+        "ai 产品经理"
+      ],
+      "domain": "product"
+    },
+    {
+      "label": "Senior Product Manager",
+      "patterns": [
+        "senior product manager",
+        "高级产品经理"
+      ],
+      "domain": "product"
+    },
+    {
+      "label": "Product Owner",
+      "patterns": [
+        "product owner"
+      ],
+      "domain": "product"
+    },
+    {
+      "label": "Program Manager",
+      "patterns": [
+        "program manager",
+        "项目总监"
+      ],
+      "domain": "operations"
+    },
+    {
+      "label": "Project Manager",
+      "patterns": [
+        "project manager",
+        "项目经理"
+      ],
+      "domain": "operations"
+    },
+    {
+      "label": "Product Marketing Manager",
+      "patterns": [
+        "product marketing",
+        "产品市场"
+      ],
+      "domain": "marketing"
+    },
+    {
+      "label": "Growth Manager",
+      "patterns": [
+        "growth manager",
+        "增长经理"
+      ],
+      "domain": "marketing"
+    },
+    {
+      "label": "Business Development",
+      "patterns": [
+        "business development",
+        "商务拓展"
+      ],
+      "domain": "business"
+    },
+    {
+      "label": "Marketing Product Manager",
+      "patterns": [
+        "marketing product manager",
+        "营销产品经理"
+      ],
+      "domain": "product"
+    },
+    {
+      "label": "E-commerce Product Manager",
+      "patterns": [
+        "e-commerce product manager",
+        "电商产品经理"
+      ],
+      "domain": "product"
+    },
+    {
+      "label": "CRM Product Manager",
+      "patterns": [
+        "crm product manager",
+        "crm 产品经理"
+      ],
+      "domain": "product"
+    },
+    {
+      "label": "Strategy Product Manager",
+      "patterns": [
+        "strategy product manager",
+        "策略产品经理"
+      ],
+      "domain": "product"
+    }
+  ],
+  "languages": [
+    {
+      "label": "English",
+      "patterns": [
+        "english",
+        "英文",
+        "英语"
+      ]
+    },
+    {
+      "label": "Cantonese",
+      "patterns": [
+        "cantonese",
+        "粵語",
+        "粤语"
+      ]
+    },
+    {
+      "label": "Mandarin",
+      "patterns": [
+        "mandarin",
+        "普通话",
+        "putonghua"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "note": "关键词 → 相关岗位/行业。键用小写；中英文都放。没有配置的关键词只出它自己的中位数。",
+  "graph": {
+    "product manager": ["project manager", "business analyst", "operations", "ux designer", "frontend developer", "backend developer", "data analyst"],
+    "产品经理": ["项目经理", "运营", "前端", "后端", "ui designer", "business analyst", "data analyst"],
+
+    "data analyst": ["business analyst", "data engineer", "data scientist", "product manager", "marketing analyst", "finance analyst"],
+    "数据分析": ["business analyst", "data engineer", "data scientist", "产品经理", "市场营销", "finance analyst"],
+
+    "business analyst": ["data analyst", "product manager", "project manager", "operations", "finance analyst"],
+    "frontend developer": ["backend developer", "full stack developer", "mobile developer", "ux designer", "qa engineer"],
+    "前端": ["后端", "full stack developer", "mobile developer", "ux designer", "qa engineer"],
+    "backend developer": ["frontend developer", "full stack developer", "devops engineer", "data engineer", "qa engineer"],
+    "后端": ["前端", "full stack developer", "devops engineer", "data engineer", "qa engineer"],
+    "software engineer": ["frontend developer", "backend developer", "full stack developer", "devops engineer", "qa engineer", "data engineer"],
+    "软件工程师": ["前端", "后端", "full stack developer", "devops engineer", "qa engineer", "data engineer"],
+
+    "operations": ["marketing executive", "product manager", "customer service", "ecommerce", "business analyst"],
+    "运营": ["marketing executive", "产品经理", "customer service", "ecommerce", "business analyst"],
+
+    "accountant": ["finance analyst", "audit", "tax", "accounting clerk", "treasury"],
+    "会计": ["finance analyst", "audit", "tax", "accounting clerk", "treasury"],
+
+    "sales": ["business development", "account manager", "customer success", "marketing executive"],
+    "销售": ["business development", "account manager", "customer success", "marketing executive"],
+
+    "marketing": ["digital marketing", "content marketing", "brand", "public relations", "ecommerce"],
+    "市场": ["digital marketing", "content marketing", "brand", "public relations", "ecommerce"],
+
+    "hr officer": ["recruitment", "payroll", "training", "admin assistant"],
+    "人力资源": ["recruitment", "payroll", "training", "admin assistant"],
+
+    "admin assistant": ["secretary", "receptionist", "hr officer", "customer service"],
+    "行政": ["secretary", "receptionist", "hr officer", "customer service"],
+
+    "customer service": ["call centre", "sales", "admin assistant", "operations"],
+    "客服": ["call centre", "sales", "admin assistant", "operations"],
+
+    "logistics": ["supply chain", "warehouse", "procurement", "shipping"],
+    "物流": ["supply chain", "warehouse", "procurement", "shipping"]
+  }
+}

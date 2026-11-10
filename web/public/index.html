@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>求职匹配台 · 香港 · JobsDB</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css?v=0.9.11">
+<link rel="stylesheet" href="extra.css?v=0.9.11">
+<script>window.__JOBMATCH__ = __JOBMATCH_BOOT__</script>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="mark">JM</span>
+    <div><h1>求职匹配台 <span>香港</span></h1>
+    <p>简历画像 → JobsDB 抓 JD（含全文）→ 规则打分 → agent 复排</p></div>
+  </div>
+  <div class="status" id="health"><span class="dot"></span><span id="healthText">连接中…</span></div>
+  <div class="spacer"></div>
+  <code class="addr" id="addr"></code>
+  <script>document.getElementById('addr').textContent = location.origin</script>
+</header>
+
+<main>
+  <section class="col left">
+    <div class="card">
+      <h2>简历 <span class="en">resume</span></h2>
+      <div class="drop" id="drop" title="拖入 .pdf / .docx / .txt / .md">
+        <strong>拖入简历文件</strong>
+        <span>.pdf · .docx · .txt · .md　≤ 5 MB，或点击选文件</span>
+        <input type="file" id="fileInput" accept=".pdf,.docx,.txt,.md" hidden>
+      </div>
+      <textarea id="resumeText" rows="4" placeholder="或直接粘贴简历正文（≥80 字）"></textarea>
+      <div class="row">
+        <input id="resumePath" placeholder="或填本机路径：C:\...\cv.docx / .pdf">
+        <button id="parseBtn" class="ghost">解析</button>
+      </div>
+      <div class="chips" id="chips"><span class="hint">还没有画像</span></div>
+      <div class="readbox" id="resumeRead" hidden></div>
+      <p class="hint" id="resumeMsg"></p>
+    </div>
+
+    <div class="card">
+      <h2>搜索条件 <span class="en">search</span></h2>
+      <label class="field"><span>关键词</span><input id="keywords" value="data analyst"></label>
+      <div class="field2">
+        <div class="field"><span>地点（可多选，空 = 全港）</span>
+          <button type="button" id="locBtn" class="picker" aria-haspopup="dialog" aria-expanded="false"><span id="locText">全港</span><em>选择</em></button>
+        </div>
+        <label class="field"><span>工作类型</span>
+          <select id="workTypes">
+            <option value="">不限</option>
+            <option value="Full time">全职 Full time</option>
+            <option value="Part time">兼职 Part time</option>
+          </select>
+        </label>
+      </div>
+      <div class="field2">
+        <label class="field"><span>抓取页数</span><select id="maxPages"><option value="1">1 页 · 30 条</option><option value="2">2 页 · 60 条</option><option value="3">3 页 · 90 条</option></select></label>
+        <label class="field"><span>我的经验年限</span><input id="yearsOverride" type="number" min="0" max="40" step="1" placeholder="按简历自动"></label>
+      </div>
+      <div class="field2">
+        <label class="field"><span>发布时间（周内）</span><input id="postedWithin" type="number" min="1" max="52" step="1" value="4" inputmode="numeric" aria-label="发布时间窗口（周）"></label>
+        <p class="hint posted-hint" id="postedHint">超过 4 周的岗位保留，公司名标红</p>
+      </div>
+      <div class="field srcfield"><span>来源 <em id="srcHint">JobsDB</em></span>
+        <p class="hint" id="sessionMsg"></p>
+        <div class="srcgrid" id="srcRows"><span class="hint">读取来源中…</span></div>
+      </div>
+      <div class="row">
+        <button id="runBtn" class="primary">开始匹配</button>
+        <button id="probeBtn" class="ghost small">自检来源</button>
+        <button id="loginBtn" class="ghost small">过人工验证</button>
+      </div>
+      <p class="hint" id="runMsg"></p>
+      <p class="hint" id="srcMsg"></p>
+    </div>
+
+    <div class="card">
+      <h2>薪酬参考 <span class="en">salary</span><span class="hint" id="salRefHint">按年限分档 · 只取明码</span></h2>
+      <p class="hint">只统计 JD 里写明月薪的岗位（Negotiable / 空值不算），按 JD 自己写的年限分档。每条都要抓一次 JD，所以慢一点。</p>
+      <div class="row">
+        <button id="salRefBtn" class="ghost">看这个关键词的薪酬参考</button>
+      </div>
+      <p class="hint" id="salRefMsg"></p>
+      <div id="salRefTable"></div>
+    </div>
+
+    <div class="card">
+      <h2>JD 要求排行 <span class="en">insight</span></h2>
+      <p class="hint">补全本轮全部 JD，按能力（数据 / 工具 / 技术 / 方法 / 产品）统计要求段落里的高频项；学历、语言只作背景不参与排名</p>
+      <button id="insightBtn" class="ghost">分析这个关键词</button>
+      <label class="hint inline-check"><input type="checkbox" id="insightAll"> 合并历史 run（按岗位去重）</label>
+      <p class="hint" id="insightMsg"></p>
+      <div id="insight"></div>
+    </div>
+  </section>
+
+  <section class="col right">
+    <div class="split">
+      <div class="card list-pane" id="listPane">
+        <h2>匹配结果 <span class="en">ranking</span><span class="hint" id="counts"></span>
+          <button id="weightsBtn" class="ghost small" aria-haspopup="dialog" aria-expanded="false">匹配比例</button>
+          <button id="langBtn" class="ghost small">原文</button>
+        </h2>
+        <div class="listwrap">
+          <table>
+            <thead><tr><th>#</th><th>分</th><th>档</th><th>经验</th><th>薪资</th><th>职位 / 公司</th></tr></thead>
+            <tbody id="rows"><tr><td colspan="6" class="empty">先解析简历，再点「开始匹配」</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="splitter" id="splitter" title="拖动调整左右宽度，双击复位"></div>
+
+      <div class="card detail-pane" id="detailCard">
+        <h2>详情 <span class="en">detail</span></h2>
+        <div id="detail"><p class="empty">点左边的任意一行，这里显示公司背景、JD 全文与命中 / 缺口</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="hist"><span class="label">最近运行</span><div id="runs" class="runs"><span class="hint">—</span></div></div>
+  <div class="actions">
+    <a id="reportLink" class="primary" target="_blank">打开报告</a>
+  </div>
+</footer>
+
+<div class="modal-mask hidden" id="locMask">
+  <div class="modal loc-modal" role="dialog" aria-modal="true" aria-labelledby="locTitle">
+    <div class="modal-head">
+      <h3 id="locTitle">选择工作地点</h3>
+      <span class="hint" id="locHint">地名取自 JobsDB，可多选；不选 = 全港</span>
+      <button id="locClose" class="ghost small" aria-label="关闭">关闭</button>
+    </div>
+    <div class="loc-groups" id="locGroups"><p class="hint">读取地点中…</p></div>
+    <div class="modal-actions">
+      <span class="hint loc-count" id="locCount">已选 0 个</span>
+      <button id="locClear" class="ghost small">清空</button>
+      <button id="locApply" class="primary small">确定</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask hidden" id="weightsMask">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="weightsTitle">
+    <div class="modal-head">
+      <h3 id="weightsTitle">匹配比例</h3>
+      <span class="hint" id="weightsHint">合计 100%</span>
+      <button id="weightsClose" class="ghost small" aria-label="关闭">关闭</button>
+    </div>
+    <p class="hint">填 0–100 的整数，按比例归一；改完自动重排，不用重新抓数据。</p>
+    <div class="wgrid" id="weightRows"></div>
+    <div class="wrow gate">
+      <span class="wlabel">经验不足折扣</span>
+      <input id="penalty" type="number" min="5" max="100" step="5" value="50" inputmode="numeric" aria-label="经验不足折扣（百分比）">
+      <span class="unit">%</span>
+      <output id="penaltyOut">×0.50</output>
+    </div>
+    <p class="hint">岗位要求的年限高于你时，整条分数乘这个系数。</p>
+    <div class="modal-actions">
+      <button id="weightsReset" class="ghost small">恢复默认</button>
+      <button id="weightsApply" class="primary small">应用并重排</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="app.js?v=0.9.11"></script>
+</body>
+</html>

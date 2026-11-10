@@ -1,0 +1,209 @@
+/* v0.8.0 增补：发布时间窗口标红 */
+.field2 > .posted-hint {
+  align-self: end;
+  margin: 0 0 9px;
+  line-height: 1.45;
+}
+
+.company-stale {
+  color: #c62828;
+  font-weight: 700;
+}
+
+/* 地点选择器 */
+.picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fcfcfd;
+  color: var(--ink);
+  text-align: left;
+  font-weight: 500;
+}
+.picker em {
+  font-style: normal;
+  font-size: 10.5px;
+  color: var(--accent);
+}
+.picker:hover {
+  border-color: #e8bfae;
+}
+.picker.has-value {
+  border-color: #e8bfae;
+  background: var(--accent-soft);
+}
+
+.loc-modal {
+  width: min(760px, 100%);
+}
+.loc-groups {
+  max-height: 58vh;
+  overflow: auto;
+  margin-top: 6px;
+  padding-right: 4px;
+}
+.loc-group {
+  margin: 10px 0 2px;
+}
+.loc-group h4 {
+  margin: 0 0 6px;
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.loc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+.loc-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  white-space: normal;
+}
+.loc-chip b {
+  font-size: 12px;
+  font-weight: 600;
+}
+.loc-chip span {
+  font-size: 10px;
+  color: var(--muted);
+}
+.loc-chip:hover {
+  border-color: #e8bfae;
+}
+.loc-chip.on {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.loc-chip.on b {
+  color: var(--accent);
+}
+.loc-count {
+  margin-right: auto;
+}
+
+/* 精确薪资（薪资匹配二分） */
+.precise-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 0;
+}
+
+/* JD 要求排行：合并历史 run 的勾选框独占一行；右侧列显示百分比，留够 3 位数字+% 的宽度 */
+.inline-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 0;
+  white-space: nowrap;
+}
+.insight-label {
+  width: 132px;
+}
+.insight-count {
+  width: 34px;
+}
+.insight-group {
+  margin: 10px 0 2px;
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.insight-context {
+  margin-top: 10px;
+}
+.insight-gap {
+  margin-top: 8px;
+  color: var(--accent);
+}
+.insight-summary {
+  margin-top: 12px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fafbfd;
+}
+.insight-summary > summary {
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.03em;
+}
+.insight-summary-head {
+  margin: 6px 0 0;
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.insight-sub {
+  margin: 8px 0 0;
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+.insight-summary ul {
+  margin: 3px 0 0;
+  padding-left: 14px;
+}
+.insight-summary li {
+  margin: 0 0 4px;
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: #4a5366;
+}
+
+/* 薪酬参考：样本不足的行压暗，推测值用灰色斜体区分 */
+.saltable tr.thin td {
+  color: #8b93a3;
+}
+.infer {
+  color: #8b93a3;
+  font-style: italic;
+}
+.saltable th,
+.saltable td.num {
+  white-space: nowrap;
+}
+
+/* 列表里的状态标识：新发布 / 已点开（放标题前，标题截断也不影响） */
+.tag {
+  display: inline-block;
+  margin-right: 4px;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-size: 9.5px;
+  font-weight: 600;
+  line-height: 1.6;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+.tag.new {
+  color: #b3261e;
+  background: #fdeceb;
+}
+.tag.seen {
+  color: #6b7280;
+  background: #f1f2f5;
+}
+@media (max-width: 720px) {
+  .loc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
