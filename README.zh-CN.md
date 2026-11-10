@@ -77,7 +77,7 @@
 要求：**Node.js ≥ 22**，本机装有 Edge/Chrome（只有登录相关的实验功能用得到）。
 
 ```bash
-git clone https://github.com/<you>/jobmatch.git
+git clone https://github.com/zsw1363574747/hk-jobmatch-ai.git
 cd jobmatch
 ```
 

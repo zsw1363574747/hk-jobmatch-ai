@@ -77,7 +77,7 @@ Job boards optimise for applications, not decisions. They will happily hand you 
 Requirements: **Node.js ≥ 22** and a local Edge/Chrome (only needed for the experimental login-based features).
 
 ```bash
-git clone https://github.com/<you>/jobmatch.git
+git clone https://github.com/zsw1363574747/hk-jobmatch-ai.git
 cd jobmatch
 ```
 
